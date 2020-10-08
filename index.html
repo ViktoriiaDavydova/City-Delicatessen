@@ -1,92 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>City Delicatessen Part B</title>
     <script src="script/script.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Staatliches"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="background">
+  <body class="background">
     <div class="header">
-        <h1>City Delicatessen</h1>
+      <h1>City Delicatessen</h1>
     </div>
 
-
-
-
     <form name="orderform" onsubmit="return false">
-        <div class="flex-container">
-            <div>
-                <h2>Fill in your information:</h2>
-                First Name: <br>
-                <input type="text" id="firstname" pattern="^[A-Za-z -]+$"
-                    title="Only letters and '-' are allowed" /><br><br>
-                Last Name: <br>
-                <input type="text" id="lastname" pattern="^[A-Za-z -]+$"
-                    title="Only letters and '-' are allowed" /><br><br>
-                Address: <br>
-                <input type="text" id="address" /><br><br>
-                Telephone #: <br>
-                <input type="tel" id="tel" placeholder="(###) ###-####" pattern="\(\d{3}\) +\d{3}-\d{4}"
-                    title="(###) ###-####" /><br><br>
-            </div>
-            <div>
-                <h2>Make your choice</h2>
-
-                <h3>Pizza:</h3>
-
-
-
-
-                <label><input type="radio" name="pizzaSelection" id="supercheesy" value="Super Cheesy">Super
-                    Cheesy</label><br>
-                <label><input type="radio" name="pizzaSelection" id="extrameaty" value="Extra Meaty">Extra
-                    Meaty</label><br>
-                <label><input type="radio" name="pizzaSelection" id="reallyveggy" value="Really Veggy">Really
-                    Veggy</label><br><br>
-
-                <label><input type="radio" name="pizzasize" id="small" value="8.50">Small: $8.50</label><br>
-                <label><input type="radio" name="pizzasize" id="medium" value="11.50">Medium: $11.50</label><br>
-                <label><input type="radio" name="pizzasize" id="large" value="14.00">Large $14.00</label><br>
-                <label><input type="radio" name="pizzasize" id="extralarge" value="16.50">Extra Large
-                    $16.50</label><br><br>
-
-                Quantity: <input type="number" name="pizzaquantity" min="0">
-                <br><br>
-
-            </div>
-            <div>
-                <h2>Choose Extra Topping</h2>
-                <h3>$1.75/each:</h3><br>
-                <input type=checkbox name=extracheese value="1.75">Extra Cheese<br>
-                <input type=checkbox name=pepperoni value="1.75">Pepperoni<br>
-                <input type=checkbox name=mushrooms value="1.75">Mushrooms<br>
-                <input type=checkbox name=bacon value="1.75">Bacon<br>
-                <input type=checkbox name=olives value="1.75">Olives<br><br>
-
-
-            </div>
-
-
-
+      <div class="flex-container">
+        <div>
+          <h2>Fill in your information:</h2>
+          First Name: <br />
+          <input
+            type="text"
+            id="firstname"
+            pattern="^[A-Za-z -]+$"
+            title="Only letters and '-' are allowed"
+          /><br /><br />
+          Last Name: <br />
+          <input
+            type="text"
+            id="lastname"
+            pattern="^[A-Za-z -]+$"
+            title="Only letters and '-' are allowed"
+          /><br /><br />
+          Address: <br />
+          <input type="text" id="address" /><br /><br />
+          Telephone #: <br />
+          <input
+            type="tel"
+            id="tel"
+            placeholder="(###) ###-####"
+            pattern="\(\d{3}\) +\d{3}-\d{4}"
+            title="(###) ###-####"
+          /><br /><br />
         </div>
-        <input type="submit" value="Add To Order" id="addtoorder" onclick="addToOrder();" />
-        <input type="submit" value="Save Changes" id="savechanges" onclick="saveChanges();">
-        <input type="hidden" value="" id="pizzaID">
-        <input type="reset"><br>
+        <div>
+          <h2>Make your choice</h2>
+
+          <h3>Pizza:</h3>
+
+          <label
+            ><input
+              type="radio"
+              name="pizzaSelection"
+              id="supercheesy"
+              value="Super Cheesy"
+            />Super Cheesy</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="pizzaSelection"
+              id="extrameaty"
+              value="Extra Meaty"
+            />Extra Meaty</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="pizzaSelection"
+              id="reallyveggy"
+              value="Really Veggy"
+            />Really Veggy</label
+          ><br /><br />
+
+          <label
+            ><input
+              type="radio"
+              name="pizzasize"
+              id="small"
+              value="8.50"
+            />Small: $8.50</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="pizzasize"
+              id="medium"
+              value="11.50"
+            />Medium: $11.50</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="pizzasize"
+              id="large"
+              value="14.00"
+            />Large $14.00</label
+          ><br />
+          <label
+            ><input
+              type="radio"
+              name="pizzasize"
+              id="extralarge"
+              value="16.50"
+            />Extra Large $16.50</label
+          ><br /><br />
+
+          Quantity: <input type="number" name="pizzaquantity" min="0" />
+          <br /><br />
+        </div>
+        <div>
+          <h2>Choose Extra Topping</h2>
+          <h3>$1.75/each:</h3>
+          <br />
+          <input type="checkbox" name="extracheese" value="1.75" />Extra
+          Cheese<br />
+          <input type="checkbox" name="pepperoni" value="1.75" />Pepperoni<br />
+          <input type="checkbox" name="mushrooms" value="1.75" />Mushrooms<br />
+          <input type="checkbox" name="bacon" value="1.75" />Bacon<br />
+          <input type="checkbox" name="olives" value="1.75" />Olives<br /><br />
+        </div>
+      </div>
+      <input
+        type="submit"
+        value="Add To Order"
+        id="addtoorder"
+        onclick="addToOrder();"
+      />
+      <input
+        type="submit"
+        value="Save Changes"
+        id="savechanges"
+        onclick="saveChanges();"
+      />
+      <input type="hidden" value="" id="pizzaID" />
+      <input type="reset" /><br />
     </form>
 
     <div>
-
-        <h2>Your order information: </h2>
-        <div><span style="list-style-type: none;" id="orderinfo"></span></div>
+      <h2>Your order information:</h2>
+      <div><span style="list-style-type: none" id="orderinfo"></span></div>
     </div>
-
-</body>
-
+  </body>
 </html>
